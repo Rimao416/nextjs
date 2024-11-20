@@ -5,7 +5,12 @@ export const metadata = {
 };
 
 function page() {
-  return <div>Page</div>;
+  return <div>
+    <h1 style={{marginTop:"50px"}}>Dashboard Page</h1>
+    <div className="part-yellow" id="yellow"></div>
+    <div className="part-green" id="green"></div>
+    <div className="part-red" id="red"></div>
+  </div>;
 }
 
 export default page;

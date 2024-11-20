@@ -7,3 +7,19 @@
 .active{
   color: hotpink;
 }
+.part-yellow{
+  margin-top: 500px;
+  height: 400px;
+  background-color: yellow;
+}
+.part-green{
+  margin-top: 500px;
+  height: 400px;
+  background-color: green;
+}
+
+.part-red{
+  margin-top: 500px;
+  height: 400px;
+  background-color: red;
+}
