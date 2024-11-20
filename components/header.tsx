@@ -26,6 +26,19 @@ function Header() {
             </h1>
           </span>
         </li>
+
+        <li className="nav-link">
+          <span onClick={() => router.push("/about")}>
+            <h1
+              data-name="about"
+              className={pathname === "/about" ? "active" : ""}
+            >
+              About
+            </h1>
+          </span>
+        </li>
+
+
         <li className="nav-link">
           <span onClick={() => router.push("/blog")}>
             <h1
@@ -33,6 +46,16 @@ function Header() {
               className={pathname === "/blog" ? "active" : ""}
             >
               Blog
+            </h1>
+          </span>
+        </li>
+        <li className="nav-link">
+          <span onClick={() => router.push("/account")}>
+            <h1
+              data-name="account"
+              className={pathname === "/account" ? "active" : ""}
+            >
+              Account
             </h1>
           </span>
         </li>
@@ -57,3 +80,7 @@ function Header() {
 }
 
 export default Header;
+
+
+
+
