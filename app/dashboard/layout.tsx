@@ -8,9 +8,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <h2>Admin Dashboard</h2>
-      {children}
-    </div>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
