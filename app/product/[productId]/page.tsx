@@ -1,13 +1,15 @@
 // app/product/[productId]/page.tsx
 
-export default async function ProductPage({ params }: { params: { productId: string } }) {
-  const { productId } = params
-  const product=await fetch(`https://dummyjson.com/products/${productId}`).then(res=>res.json()) 
-  console.log(product) 
+export async function generateStaticParams() {
+  const products = await fetch('https://dummyjson.com/products').then(res => res.json());
 
-  // Tu peux utiliser productId pour afficher la page
-  return <div>{product.title}
-  <h3>{product.description}</h3>
-  <p>{product.price}</p>
-  </div>;
+  // Assure-toi que `productId` est bien une chaîne de caractères
+  return products.products.map((product: { id: number }) => ({
+    productId: String(product.id), // Convertir l'id en string
+  }));
+}
+
+export default async function ProductPage({ params }: { params: { productId: string } }) {
+  // Affichage de productId qui est maintenant une chaîne de caractères
+  return <div>{params.productId}</div>;
 }
